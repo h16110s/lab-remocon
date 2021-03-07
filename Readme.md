@@ -28,7 +28,7 @@ forever start -w -c coffee node_modules/.bin/hubot -a slack
 
 
 ## webcon
-`server.js`にGoogleHomeのIPアドレス、webcon/wwwroot/call.htmlにRaspberryPiのIPアドレスを入力
+`server.js`にGoogleHomeのIPアドレスを追加
 
 
 
