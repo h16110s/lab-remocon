@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>学園生活部</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a href="index.html" class="navbar-brand">学園生活部</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu1"
+                aria-controls="navmenu1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu1">
+                <div class="navbar-nav">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="title">
+        <img src="figure/title.png">
+    </div>
+
+
+    <form method="POST">
+        <div class="container-fluid mt-3">
+            <div class="row justify-content-around text-center">
+                <div class="col-sm-5 col-md-3 m-3">
+                    <button type="submit" name="submit1" value="1" class="btn btn-primary rounded-pill remocon">
+                        Windows<img class="mx-4" src="figure/icon/win.png">
+                    </button>
+                </div>
+                <div class="col-sm-5 col-md-3 m-3 ">
+                    <button type="submit" name="submit2" value="2" class="btn btn-primary rounded-pill remocon">
+                        HDMI<img class="mx-4 " src="figure/icon/hdmi.jpg">
+                    </button>
+                </div>
+                <div class="col-sm-5 col-md-3 m-3 ">
+                    <button type="submit" name="submit3" value="3" class="btn btn-primary rounded-pill  remocon">
+                        Chrome Cast <img class="mx-4 " src="figure/icon/google.jpg">
+                    </button>
+                </div>
+                <div class="col-sm-5 col-md-3 m-3 ">
+                    <button type="submit" name="submit4" value="4" class="btn btn-primary rounded-pill  remocon">
+                        Apple TV<img class="mx-4 " src="figure/icon/apple.jpg">
+                    </button>
+                </div>
+                <div class="col-sm-5 col-md-3 m-3 ">
+                    <button type="submit" name="submit5" value="5" class="btn btn-primary rounded-pill  remocon">
+                        デスクトップ<img class="mx-4 " src="figure/icon/desktop.png">
+                    </button>
+                </div>
+                <div class="col-sm-5 col-md-3 m-3 ">
+                    <button type="submit" name="submit6" value="6" class="btn btn-primary rounded-pill  remocon">
+                        テレビ電源<img class="mx-4 " src="figure/icon/power.png">
+                    </button>
+                </div>
+            </div>　
+            <!-- row -->
+
+            <div class="row justify-content-around text-center mt-3">
+                <div class="col-md-6 m-5">
+                    <button type="submit" name="submit9" value="9" class="btn btn-warning rounded-pill  remocon">
+                        呼び出し<img class="mx-4 " src="figure/icon/call.png">
+                    </button>
+                </div>
+	    </div>  <!-- row -->
+        </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        $(function () {
+            var now_hour = new Date().getHours();
+            if (0 <= now_hour && now_hour <= 5) {
+                $('body').css('background', "#1d1d1d");
+            } else if (6 <= now_hour && now_hour <= 10) {
+                $('body').css('background', '#c1f3ff');
+            } else if (11 <= now_hour && now_hour <= 15) {
+                $('body').css('background', '#e2ffd2');
+            } else if (16 <= now_hour && now_hour <= 19) {
+                $('body').css('background', '#f7d2ba');
+            } else if (20 <= now_hour && now_hour <= 23) {
+                $('body').css('background', '#1d1d1d');
+            }
+        });
+    </script>
+</body>
+
+</html>
