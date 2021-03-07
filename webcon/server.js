@@ -8,7 +8,7 @@ var exec = require('child_process').exec;
 const googlehome = require('google-home-notifier');
 const language = 'ja';
 googlehome.device("Google-Home", language);
-googlehome.ip('');　//　サーバアドレス
+googlehome.ip('');　//　GoogleHomeIPアドレス
 // *******************************************************
  
 // ルートディレクトリの設定*******************************
