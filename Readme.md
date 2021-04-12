@@ -52,3 +52,6 @@ Docsの`Construction.md`に構築メモは残してある。
 
 # MEMO
 画像やIPなどは版権等もあるためアップロードしていない
+
+リモコン用RaspberryPiのOSは公式？からダウンロード
+- http://www.lcdwiki.com/7inch_HDMI_Display-C
