@@ -46,7 +46,7 @@ $ sudo pip install pyserial
 
 次にirmcliのリポジトリをクローンしてつかう
 ```bash
-$ git clone https://github.com/netbuffalo/irmcli.git  
+$ git clone https://github.com/butadora3/irmcli.git
 $ cd irmcli  
 ```
 
@@ -320,7 +320,18 @@ forever start -w -c coffee node_modules/.bin/hubot -a slack         # この１�
 起動方法は今までと同じ
 
 
+## Hubot
+homebot/bin/hubotに`HUBOT_SLACK_TOKEN`を設定
+永続的に起動する場合にはforeverモジュールで起動するため、homebot/bin/hubotファイルの
+```
+exec node_modules/.bin/hubot --name "homebot" "$@"
+```
+の行をコメントアウトし、
 
+```
+forever start -w -c coffee node_modules/.bin/hubot -a slack
+```
+の行をコメントアウトを外す。
 
 
 
