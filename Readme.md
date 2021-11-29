@@ -88,24 +88,16 @@ sudo npm install -g forever
 forever start server.js
 ```
 
-
-# 起動方法
-hubotの起動
+自動起動の設定は'crontab'を使う
+```bash
+crontab -e
 ```
-cd ~/workdir/homebot/
-bin/hubot
+でファイルを編集して以下を追記
 ```
-
-webコントローラの起動
-```
-cd ~/workdir/webcon
-forever start server.js
+@reboot /usr/local/bin/forever start --workingDir ${HOME}/workdir/webcon/  -c "node server.js" ./
 ```
 
-# 構築方法
-Docsの`Construction.md`に構築メモは残してある。
-
-
+リブートして実行されてればOK
 
 # MEMO
 画像やIPなどは版権等もあるためアップロードしていない
