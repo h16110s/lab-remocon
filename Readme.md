@@ -11,7 +11,7 @@ git clone https://github.com/h16110s/lab-remocon workdir
 irMagitian用のリポジトリを取得
 ```
 cd workdir/irmcli
-git clone https://github.com/netbuffalo/irmcli.git  
+git clone https://github.com/h16110s/irmcli.git
 ```
 
 動かすのに必要なパッケージをインストール
