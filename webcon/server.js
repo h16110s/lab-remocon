@@ -8,7 +8,7 @@ var exec = require('child_process').exec;
 const googlehome = require('google-home-notifier');
 const language = 'ja';
 googlehome.device("Google-Home", language);
-googlehome.ip('');　//　GoogleHomeIPアドレス
+googlehome.ip(''); //　GoogleHomeIPアドレス
 // *******************************************************
  
 // ルートディレクトリの設定*******************************
@@ -20,8 +20,19 @@ app.get('/', function (req, res) {
  
  
 // Postデータの処理 *************************************
-app.post('/', function (req, res) {
- console.log("postnow");
+app.post('/', function(req, res) {
+    sendData(req,res, '/');
+});
+// ****************************************************
+
+// Postデータの処理 *************************************
+app.post('/app.html', function(req, res){
+    sendData(req,res, '/app.html');
+});
+// ****************************************************
+
+function sendData(req, res, redirect_page){
+    console.log("postnow");
     var data = '';
     req.on('data', function (chunk) { data += chunk }).on('end', function () {
         console.log(data);
@@ -88,11 +99,9 @@ app.post('/', function (req, res) {
         } else {
         }
     })
-    res.redirect('/');
+    res.redirect(redirect_page);
     res.end();
-});
-// ************************************************************************
- 
+}
  
 // 起動時の処理
 http.listen(port, function () {
